@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Currency Converter</h1>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <ul>
+            {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
+    <form method="post">
+        <div>
+            <label for="from_currency">From:</label>
+            <input type="text" name="from_currency" required>
+        </div>
+        <br>
+        <div>
+            <label for="to_currency">To:</label>
+            <input type="text" name="to_currency" required>
+        </div>
+        <br>
+        <div>
+            <label for="amount">Amount:</label>
+            <input type="text" name="amount" required>
+        </div>
+        <br>
+        <input type="submit" value="Convert">
+    </form>
+    {% if result %}
+    <p>Converted Amount:{{ result }}</p>
+    {% endif %}
+</body>
+</html>

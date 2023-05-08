@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container {
+    margin-bottom: 10px;
+}
+
+label {
+    display: inline-block;
+    width: 60px;
+}
+
+input[type="text"] {
+    padding: 5px;
+    font-size: 14px;
+    width: 200px;
+}
+
+input[type="submit"] {
+    width: 100px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+li.error {
+    color: red;
+}
